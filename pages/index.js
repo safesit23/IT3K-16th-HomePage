@@ -1,17 +1,19 @@
-import React from 'react'
-import HomePage from '../components/homepage'
-// import styled from 'styled-components'
+import React from "react"
+import HomePage from "../components/homepage"
+import styled from "styled-components"
 
-
+const HelloWorld = styled.div`
+  padding : 50px;
+`
 
 class componentName extends React.Component {
   render () {
     return (
-      <div>
+      <HelloWorld>
         <HomePage />
-      </div>
+      </HelloWorld>
     )
   }
 }
 
-export default componentName;
+export default componentName
