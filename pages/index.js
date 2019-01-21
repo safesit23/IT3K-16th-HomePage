@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 const HelloWorld = styled.div`
   padding : 50px;
+  margin : 0px;
 `
 
 class componentName extends React.Component {
