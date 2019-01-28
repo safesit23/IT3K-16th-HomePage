@@ -57,10 +57,6 @@ font-size: 14px;
 }
 `
 
-const Detail = () => (
-  <p>2 กุมภาพันธ์ 2019</p>
-)
-
 const Sizeimg = styled.img`
   @media (max-width: 375px) {
     width: 70px;
@@ -90,16 +86,29 @@ const DetailSize2 = styled.p`
 const ButtonAdv = styled.div`
   background-color: white;
   padding-top: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   border-radius: 10px;
   padding-right: 20px;
 
   @media(max-width: 414px){
   padding-top: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   border-radius: 10px;
   padding-right: 20px;
   }
+`
+const InsideButton = styled(Row)`
+font-family: Kanit;
+font-size: 12px;
+`
+
+const SizeImgButton = styled.img`
+  width: 18px;
+  height: 16px;
+`
+const SizeImgButton1 = styled.img`
+  width: 7.4px;
+  height: 12px;
 `
 
 class Homepage extends React.Component {
@@ -154,6 +163,32 @@ class Homepage extends React.Component {
                 </Col>
               </Row>
             </a>
+            <InsideButton >
+              <Col xs={{size: 1, offset: 1}}>
+                <SizeImgButton src='/static/img/trophy-solid.png' />
+
+              </Col>
+              <Col xs={{size: 6, offset: 1}}>
+              ตารางการแข่งขัน
+              </Col>
+              <Col xs={{size: 1, offset: 1}}>
+                <SizeImgButton1 src='/static/img/Shape.png' />
+              </Col>
+
+            </InsideButton>
+          </ButtonAdv>
+          <ButtonAdv className='mt-4'>
+            <InsideButton>
+              <Col xs={{size: 1, offset: 1}}>
+                <SizeImgButton src='/static/img/crown-solid.png' />
+              </Col>
+              <Col xs={{size: 7, offset: 1}}>
+              ระบบโหวต ดาว-เดือน
+              </Col>
+              <Col xs={{size: 1, offset: 0}}>
+                <SizeImgButton1 src='/static/img/Shape.png' />
+              </Col>
+            </InsideButton>
           </ButtonAdv>
         </Container>
       </Landing>
