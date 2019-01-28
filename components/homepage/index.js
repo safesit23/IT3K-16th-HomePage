@@ -32,7 +32,7 @@ animation: AnimationName 3s ease infinite;
 const TitleStyle = styled.h1`
 /* font-family: dY_AgencyGP; */
 line-height: normal;
-font-size: 64px;
+font-size: 54px;
 text-align: center;
 font-family: Kanit;
 
@@ -89,6 +89,8 @@ const ButtonAdv = styled.div`
   padding-bottom: 10px;
   border-radius: 10px;
   padding-right: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.24);
+border-radius: 4px;
 
   @media(max-width: 414px){
   padding-top: 10px;
