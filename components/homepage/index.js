@@ -136,59 +136,33 @@ class Homepage extends React.Component {
           </Row>
           <ButtonAdv>
             <a href='https://sport.it3k.in.th'>
-              <Row >
+              <InsideButton >
                 <Col xs={{size: 1, offset: 1}}>
-                  <img src='/static/img/trophy-solid.png' />
+                  <SizeImgButton src='/static/img/trophy-solid.png' />
                 </Col>
                 <Col xs={{size: 6, offset: 1}}>
               ตารางการแข่งขัน
                 </Col>
                 <Col xs={{size: 1, offset: 1}}>
-                  <img src='/static/img/Shape.png' />
+                  <SizeImgButton1 src='/static/img/Shape.png' />
                 </Col>
-              </Row>
+              </InsideButton>
             </a>
           </ButtonAdv>
           <ButtonAdv className='mt-4'>
             <a href='https://vote.it3k.in.th'>
-              <Row>
+              <InsideButton>
                 <Col xs={{size: 1, offset: 1}}>
-                  <img src='/static/img/crown-solid.png' />
+                  <SizeImgButton src='/static/img/crown-solid.png' />
                 </Col>
                 <Col xs={{size: 7, offset: 1}}>
               ระบบโหวต ดาว-เดือน
                 </Col>
                 <Col xs={{size: 1, offset: 0}}>
-                  <img src='/static/img/Shape.png' />
+                  <SizeImgButton1 src='/static/img/Shape.png' />
                 </Col>
-              </Row>
+              </InsideButton>
             </a>
-            <InsideButton >
-              <Col xs={{size: 1, offset: 1}}>
-                <SizeImgButton src='/static/img/trophy-solid.png' />
-
-              </Col>
-              <Col xs={{size: 6, offset: 1}}>
-              ตารางการแข่งขัน
-              </Col>
-              <Col xs={{size: 1, offset: 1}}>
-                <SizeImgButton1 src='/static/img/Shape.png' />
-              </Col>
-
-            </InsideButton>
-          </ButtonAdv>
-          <ButtonAdv className='mt-4'>
-            <InsideButton>
-              <Col xs={{size: 1, offset: 1}}>
-                <SizeImgButton src='/static/img/crown-solid.png' />
-              </Col>
-              <Col xs={{size: 7, offset: 1}}>
-              ระบบโหวต ดาว-เดือน
-              </Col>
-              <Col xs={{size: 1, offset: 0}}>
-                <SizeImgButton1 src='/static/img/Shape.png' />
-              </Col>
-            </InsideButton>
           </ButtonAdv>
         </Container>
       </Landing>
