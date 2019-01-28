@@ -1,8 +1,6 @@
 import React from "react"
 import {Container, Row, Col, Button} from "reactstrap"
 import styled from "styled-components"
-import Loading from "./Loading"
-
 
 const Landing = styled(Container)`
   /* background-image : linear-gradient(270deg, #5F597B 0%, #B2605C 100%); */

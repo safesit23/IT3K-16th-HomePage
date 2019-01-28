@@ -1,28 +1,39 @@
-import React, { Component } from "react"
-import {Container, Row, Col} from "reactstrap"
+import React from "react"
 import styled from "styled-components"
+import {compose, withState, lifecycle} from "recompose"
+
+const Bg = styled.section`
+  height:100%;
+  width:100%;
+  background: #ffffff;
+  z-index: 99999;
+  position: fixed;
+  display: block;
+  transition: all 1.5s ease-in-out;
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+`
 
 const Picture = styled.img`
   height: 120px;
   width: auto;
 `
 
-const RowP = styled(Row)`
-  padding-top: 30%;
-`
+const index = ({show , delay }) => (
+  <Bg className={`d-flex justify-content-center align-items-center ${!show ? "hide" : ""}`}>
+    <Picture src='/static/img/logoIT3K-Loading.png' />
+  </Bg>
+)
 
-class Loadingpage extends Component {
-  render () {
-    return (
-      <Container>
-        <RowP>
-          <Col className='d-flex justify-content-center' >
-            <Picture src='/static/img/logoIT3K-Loading.png' />
-          </Col>
-        </RowP>
-      </Container>
-    )
-  }
-}
-
-export default Loadingpage
+export default compose(
+  withState("show", "setShow", true),
+  lifecycle({
+    componentDidMount () {
+      setTimeout(() => {
+        this.props.setShow(false)
+      }, 2000)
+    }
+  })
+)(index)
