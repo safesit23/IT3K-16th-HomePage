@@ -45,9 +45,9 @@ const TitleStyle = styled.h1`
 line-height: normal;
 font-size: 64px;
 text-align: center;
+font-family: Kanit;
 
 @media(max-width: 375px){
-  font-family: Kanit;
 font-style: normal;
 font-weight: 500;
 line-height: 24px;
@@ -72,9 +72,6 @@ const Detail = () => (
   <p>2 กุมภาพันธ์ 2019</p>
 )
 
-const Button1 = styled.div`
-  border : 1 px;
-`
 const Sizeimg = styled.img`
   @media (max-width: 375px) {
     width: 70px;
@@ -82,8 +79,8 @@ const Sizeimg = styled.img`
     }
 `
 const DetailSize = styled.p`
-  @media(max-width: 375px){
     font-family: Kanit;
+  @media(max-width: 375px){
 font-style: normal;
 font-weight: normal;
 line-height: 24px;
@@ -92,29 +89,28 @@ font-size: 14px;
 `
 
 const DetailSize2 = styled.p`
+  font-family: Kanit;
   @media(max-width: 375px){
-    font-family: Kanit;
-font-style: normal;
-font-weight: normal;
-line-height: 24px;
-font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 12px;
   }
 `
 
 const ButtonAdv = styled.div`
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  padding-right: 20px;
 
   @media(max-width: 414px){
-  background-color: white;
   padding-top: 10px;
   padding-bottom: 5px;
   border-radius: 10px;
   padding-right: 20px;
   }
-  background-color: white;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  border-radius: 10px;
-  padding-right: 20px;
 `
 
 class Homepage extends React.Component {
