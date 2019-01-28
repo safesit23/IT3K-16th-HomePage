@@ -1,5 +1,5 @@
 import React from "react"
-import {Container, Row, Col, Button} from "reactstrap"
+import {Container, Row, Col} from "reactstrap"
 import styled from "styled-components"
 
 const Landing = styled(Container)`
@@ -27,17 +27,6 @@ animation: AnimationName 3s ease infinite;
     100%{background-position:0% 50%}
 }
   height : 100vh;
-`
-
-const MyButton = styled(Button)`
-    /* @media(max-width: 375px){ */
-left: 28px;
-top: 219px;
-    }
-`
-
-const TextInMyButton = styled(MyButton)`
-    color : black;
 `
 
 const TitleStyle = styled.h1`
@@ -129,67 +118,45 @@ class Homepage extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col className='d-flex justify-content-center'>
+            <Col xs='12' className='d-flex justify-content-center'>
               <DetailSize>วันที่ 2 กุมภาพันธ์ พ.ศ. 2562</DetailSize>
             </Col>
-          </Row>
-          <Row className='mb-5'>
-            <Col className='d-flex justify-content-center'>
+            <Col xs='12' className='d-flex justify-content-center'>
               <DetailSize2>ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้า</DetailSize2>
             </Col>
           </Row>
           <ButtonAdv>
-            <Row >
-              <Col xs={{size: 1, offset: 1}}>
-
-                {/* <Col xs={{size: 1, offset: 1}}>
-                <img src='/static/img/trophy-solid.png' className='mr-2' />
-              </Col>
-              <Col>
-                  ตารางผลการแข่งขัน
-              </Col>
-
-              <img src='/static/img/Shape.png' className='ml-3' /> */}
-                <img src='/static/img/trophy-solid.png' />
-
-              </Col>
-              <Col xs={{size: 6, offset: 1}}>
+            <a href='https://sport.it3k.in.th'>
+              <Row >
+                <Col xs={{size: 1, offset: 1}}>
+                  <img src='/static/img/trophy-solid.png' />
+                </Col>
+                <Col xs={{size: 6, offset: 1}}>
               ตารางการแข่งขัน
-              </Col>
-              <Col xs={{size: 1, offset: 1}}>
-                <img src='/static/img/Shape.png' />
-              </Col>
-
-            </Row>
+                </Col>
+                <Col xs={{size: 1, offset: 1}}>
+                  <img src='/static/img/Shape.png' />
+                </Col>
+              </Row>
+            </a>
           </ButtonAdv>
           <ButtonAdv className='mt-4'>
-            <Row>
-              {/* <Col className='d-flex justify-content-center'>
-              <MyButton size='lg' block>
-                <img src='/static/img/crown-solid.png' className='mr-2' />
+            <a href='https://vote.it3k.in.th'>
+              <Row>
+                <Col xs={{size: 1, offset: 1}}>
+                  <img src='/static/img/crown-solid.png' />
+                </Col>
+                <Col xs={{size: 7, offset: 1}}>
               ระบบโหวต ดาว-เดือน
-                <img src='/static/img/Shape.png' />
-              </MyButton>
-            </Col> */}
-              <Col xs={{size: 1, offset: 1}}>
-                <img src='/static/img/crown-solid.png' />
-              </Col>
-              <Col xs={{size: 7, offset: 1}}>
-              ระบบโหวต ดาว-เดือน
-              </Col>
-              <Col xs={{size: 1, offset: 0}}>
-                <img src='/static/img/Shape.png' />
-              </Col>
-            </Row>
+                </Col>
+                <Col xs={{size: 1, offset: 0}}>
+                  <img src='/static/img/Shape.png' />
+                </Col>
+              </Row>
+            </a>
           </ButtonAdv>
         </Container>
       </Landing>
-      /* <HelloWorld>
-        <Title />
-        <Detail />
-        <MyButton color='primary' className='ml-3'>ดูผลการแข่งขัน</MyButton>
-        <TextInMyButton color='success' className='ml-3'>โหวตดาวเดือน</TextInMyButton>
-      </HelloWorld> */
     )
   }
 }
