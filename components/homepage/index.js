@@ -1,6 +1,8 @@
 import React from "react"
 import {Container, Row, Col, Button} from "reactstrap"
 import styled from "styled-components"
+import Loading from "./Loading"
+
 
 const Landing = styled(Container)`
   /* background-image : linear-gradient(270deg, #5F597B 0%, #B2605C 100%); */
@@ -30,7 +32,10 @@ animation: AnimationName 3s ease infinite;
 `
 
 const MyButton = styled(Button)`
-    background-color : yellow;
+    /* @media(max-width: 375px){ */
+left: 28px;
+top: 219px;
+    }
 `
 
 const TextInMyButton = styled(MyButton)`
@@ -42,11 +47,28 @@ const TitleStyle = styled.h1`
 line-height: normal;
 font-size: 64px;
 text-align: center;
+
+@media(max-width: 375px){
+  font-family: Kanit;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+font-size: 24px;
+}
 `
 
 const Title = () => (
-  <TitleStyle>IT 3KINGS #16</TitleStyle>
+  <TitleStyle>IT3K ครั้งที่ 16</TitleStyle>
 )
+
+const SizeDetail = styled.p`
+@media(max-width : 375px){
+  font-style: normal;
+font-weight: normal;
+line-height: 24px;
+font-size: 14px;
+}
+`
 
 const Detail = () => (
   <p>2 กุมภาพันธ์ 2019</p>
@@ -55,42 +77,117 @@ const Detail = () => (
 const Button1 = styled.div`
   border : 1 px;
 `
+const Sizeimg = styled.img`
+  @media (max-width: 375px) {
+    width: 70px;
+    height: 55.48px;
+    }
+`
+const DetailSize = styled.p`
+  @media(max-width: 375px){
+    font-family: Kanit;
+font-style: normal;
+font-weight: normal;
+line-height: 24px;
+font-size: 14px;
+  }
+`
+
+const DetailSize2 = styled.p`
+  @media(max-width: 375px){
+    font-family: Kanit;
+font-style: normal;
+font-weight: normal;
+line-height: 24px;
+font-size: 12px;
+  }
+`
+
+const ButtonAdv = styled.div`
+
+  @media(max-width: 414px){
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  padding-right: 20px;
+  }
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  padding-right: 20px;
+`
 
 class Homepage extends React.Component {
   render () {
     return (
       <Landing fluid>
         <Container>
-          <Row>
+          <Row className='pt-5'>
             <Col className='d-flex justify-content-center'>
-              <img src='/static/img/logoIT3K.svg' />
+              <Sizeimg src='/static/img/logoIT3K.svg' />
             </Col>
           </Row>
-          <Row>
+          <Row className='mt-3'>
             <Col className='d-flex justify-content-center'>
               <Title />
             </Col>
           </Row>
           <Row>
             <Col className='d-flex justify-content-center'>
-              2 กุมภาพันธ์ 2019
+              <DetailSize>วันที่ 2 กุมภาพันธ์ พ.ศ. 2562</DetailSize>
             </Col>
           </Row>
           <Row className='mb-5'>
             <Col className='d-flex justify-content-center'>
-              ณ มหาวิทยาลัยพระจอมเกล้า
+              <DetailSize2>ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้า</DetailSize2>
             </Col>
           </Row>
-          <Row className='mb-3'>
-            <Col className='d-flex justify-content-center'>
-              <Button>ดูผลการแข่งขัน</Button>
-            </Col>
-          </Row>
-          <Row>
-            <Col className='d-flex justify-content-center'>
-              <Button>โหวตดาวเดือน</Button>
-            </Col>
-          </Row>
+          <ButtonAdv>
+            <Row >
+              <Col xs={{size: 1, offset: 1}}>
+
+                {/* <Col xs={{size: 1, offset: 1}}>
+                <img src='/static/img/trophy-solid.png' className='mr-2' />
+              </Col>
+              <Col>
+                  ตารางผลการแข่งขัน
+              </Col>
+
+              <img src='/static/img/Shape.png' className='ml-3' /> */}
+                <img src='/static/img/trophy-solid.png' />
+
+              </Col>
+              <Col xs={{size: 6, offset: 1}}>
+              ตารางการแข่งขัน
+              </Col>
+              <Col xs={{size: 1, offset: 1}}>
+                <img src='/static/img/Shape.png' />
+              </Col>
+
+            </Row>
+          </ButtonAdv>
+          <ButtonAdv className='mt-4'>
+            <Row>
+              {/* <Col className='d-flex justify-content-center'>
+              <MyButton size='lg' block>
+                <img src='/static/img/crown-solid.png' className='mr-2' />
+              ระบบโหวต ดาว-เดือน
+                <img src='/static/img/Shape.png' />
+              </MyButton>
+            </Col> */}
+              <Col xs={{size: 1, offset: 1}}>
+                <img src='/static/img/crown-solid.png' />
+              </Col>
+              <Col xs={{size: 7, offset: 1}}>
+              ระบบโหวต ดาว-เดือน
+              </Col>
+              <Col xs={{size: 1, offset: 0}}>
+                <img src='/static/img/Shape.png' />
+              </Col>
+            </Row>
+          </ButtonAdv>
         </Container>
       </Landing>
       /* <HelloWorld>
