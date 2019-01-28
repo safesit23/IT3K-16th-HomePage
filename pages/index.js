@@ -1,14 +1,14 @@
 import React from "react"
-import Homepage from "../components/homepage"
+import App from "../components/core/App"
 
-class componentName extends React.Component {
+class Index extends React.Component {
   render () {
     return (
       <div>
-        <Homepage />
+        <App />
       </div>
     )
   }
 }
 
-export default componentName
+export default Index
