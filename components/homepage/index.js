@@ -68,10 +68,6 @@ font-size: 14px;
 }
 `
 
-const Detail = () => (
-  <p>2 กุมภาพันธ์ 2019</p>
-)
-
 const Sizeimg = styled.img`
   @media (max-width: 375px) {
     width: 70px;
@@ -101,16 +97,29 @@ const DetailSize2 = styled.p`
 const ButtonAdv = styled.div`
   background-color: white;
   padding-top: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   border-radius: 10px;
   padding-right: 20px;
 
   @media(max-width: 414px){
   padding-top: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   border-radius: 10px;
   padding-right: 20px;
   }
+`
+const InsideButton = styled(Row)`
+font-family: Kanit;
+font-size: 12px;
+`
+
+const SizeImgButton = styled.img`
+  width: 18px;
+  height: 16px;
+`
+const SizeImgButton1 = styled.img`
+  width: 7.4px;
+  height: 12px;
 `
 
 class Homepage extends React.Component {
@@ -139,48 +148,32 @@ class Homepage extends React.Component {
             </Col>
           </Row>
           <ButtonAdv>
-            <Row >
+            <InsideButton >
               <Col xs={{size: 1, offset: 1}}>
-
-                {/* <Col xs={{size: 1, offset: 1}}>
-                <img src='/static/img/trophy-solid.png' className='mr-2' />
-              </Col>
-              <Col>
-                  ตารางผลการแข่งขัน
-              </Col>
-
-              <img src='/static/img/Shape.png' className='ml-3' /> */}
-                <img src='/static/img/trophy-solid.png' />
+                <SizeImgButton src='/static/img/trophy-solid.png' />
 
               </Col>
               <Col xs={{size: 6, offset: 1}}>
               ตารางการแข่งขัน
               </Col>
               <Col xs={{size: 1, offset: 1}}>
-                <img src='/static/img/Shape.png' />
+                <SizeImgButton1 src='/static/img/Shape.png' />
               </Col>
 
-            </Row>
+            </InsideButton>
           </ButtonAdv>
           <ButtonAdv className='mt-4'>
-            <Row>
-              {/* <Col className='d-flex justify-content-center'>
-              <MyButton size='lg' block>
-                <img src='/static/img/crown-solid.png' className='mr-2' />
-              ระบบโหวต ดาว-เดือน
-                <img src='/static/img/Shape.png' />
-              </MyButton>
-            </Col> */}
+            <InsideButton>
               <Col xs={{size: 1, offset: 1}}>
-                <img src='/static/img/crown-solid.png' />
+                <SizeImgButton src='/static/img/crown-solid.png' />
               </Col>
               <Col xs={{size: 7, offset: 1}}>
               ระบบโหวต ดาว-เดือน
               </Col>
               <Col xs={{size: 1, offset: 0}}>
-                <img src='/static/img/Shape.png' />
+                <SizeImgButton1 src='/static/img/Shape.png' />
               </Col>
-            </Row>
+            </InsideButton>
           </ButtonAdv>
         </Container>
       </Landing>
