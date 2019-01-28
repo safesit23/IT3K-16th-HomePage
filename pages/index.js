@@ -1,18 +1,12 @@
 import React from "react"
-import HomePage from "../components/homepage"
-import styled from "styled-components"
-
-const HelloWorld = styled.div`
-  padding : 50px;
-  margin : 0px;
-`
+import Homepage from "../components/homepage"
 
 class componentName extends React.Component {
   render () {
     return (
-      <HelloWorld>
-        <HomePage />
-      </HelloWorld>
+      <div>
+        <Homepage />
+      </div>
     )
   }
 }
