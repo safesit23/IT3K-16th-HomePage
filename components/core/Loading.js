@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import {Container, Row, Col, Button} from "reactstrap"
+import {Container, Row, Col} from "reactstrap"
 import styled from "styled-components"
 
 const Picture = styled.img`
@@ -11,7 +11,7 @@ const RowP = styled(Row)`
   padding-top: 30%;
 `
 
-class Loadingpage extends React.Component {
+class Loadingpage extends Component {
   render () {
     return (
       <Container>
