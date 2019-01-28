@@ -35,6 +35,7 @@ line-height: normal;
 font-size: 54px;
 text-align: center;
 font-family: Kanit;
+color: #FFFFFF;
 
 @media(max-width: 375px){
 font-style: normal;
@@ -65,6 +66,7 @@ const Sizeimg = styled.img`
 `
 const DetailSize = styled.p`
     font-family: Kanit;
+    color: #FFFFFF;
   @media(max-width: 375px){
 font-style: normal;
 font-weight: normal;
@@ -75,6 +77,7 @@ font-size: 14px;
 
 const DetailSize2 = styled.p`
   font-family: Kanit;
+  color: #FFFFFF;
   @media(max-width: 375px){
   font-style: normal;
   font-weight: normal;
@@ -83,7 +86,7 @@ const DetailSize2 = styled.p`
   }
 `
 
-const ButtonAdv = styled.div`
+const ButtonAdv = styled(Col)`
   background-color: white;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -113,6 +116,14 @@ const SizeImgButton1 = styled.img`
   height: 12px;
 `
 
+const Link = styled.a`
+  color: #757575;
+
+  &:hover{
+    color: green;
+  }
+`
+
 class Homepage extends React.Component {
   render () {
     return (
@@ -128,44 +139,48 @@ class Homepage extends React.Component {
               <Title />
             </Col>
           </Row>
-          <Row>
+          <Row className='mb-4'>
             <Col xs='12' className='d-flex justify-content-center'>
-              <DetailSize>วันที่ 2 กุมภาพันธ์ พ.ศ. 2562</DetailSize>
+              <DetailSize className='mb-0'>วันที่ 2 กุมภาพันธ์ พ.ศ. 2562</DetailSize>
             </Col>
             <Col xs='12' className='d-flex justify-content-center'>
               <DetailSize2>ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้า</DetailSize2>
             </Col>
-          </Row>
-          <ButtonAdv>
-            <a href='https://sport.it3k.in.th'>
-              <InsideButton >
-                <Col xs={{size: 1, offset: 1}}>
-                  <SizeImgButton src='/static/img/trophy-solid.png' />
-                </Col>
-                <Col xs={{size: 6, offset: 1}}>
+          </Row >
+          <Row className='d-flex justify-content-center'>
+            <ButtonAdv lg='6'>
+              <Link href='https://sport.it3k.in.th'>
+                <InsideButton >
+                  <Col xs={{size: 1, offset: 1}}>
+                    <SizeImgButton src='/static/img/trophy-solid.png' />
+                  </Col>
+                  <Col xs={{size: 6, offset: 1}}>
               ตารางการแข่งขัน
-                </Col>
-                <Col xs={{size: 1, offset: 1}}>
-                  <SizeImgButton1 src='/static/img/Shape.png' />
-                </Col>
-              </InsideButton>
-            </a>
-          </ButtonAdv>
-          <ButtonAdv className='mt-4'>
-            <a href='https://vote.it3k.in.th'>
-              <InsideButton>
-                <Col xs={{size: 1, offset: 1}}>
-                  <SizeImgButton src='/static/img/crown-solid.png' />
-                </Col>
-                <Col xs={{size: 7, offset: 1}}>
-              ระบบโหวต ดาว-เดือน
-                </Col>
-                <Col xs={{size: 1, offset: 0}}>
-                  <SizeImgButton1 src='/static/img/Shape.png' />
-                </Col>
-              </InsideButton>
-            </a>
-          </ButtonAdv>
+                  </Col>
+                  <Col xs={{size: 1, offset: 1}}>
+                    <SizeImgButton1 src='/static/img/Shape.png' />
+                  </Col>
+                </InsideButton>
+              </Link>
+            </ButtonAdv>
+          </Row>
+          <Row className='d-flex justify-content-center'>
+            <ButtonAdv className='mt-4' lg='6'>
+              <Link href='https://vote.it3k.in.th'>
+                <InsideButton>
+                  <Col xs={{size: 1, offset: 1}}>
+                    <SizeImgButton src='/static/img/crown-solid.png' />
+                  </Col>
+                  <Col xs={{size: 7, offset: 1}}>
+                  ระบบโหวต ดาว-เดือน
+                  </Col>
+                  <Col xs={{size: 1, offset: 0}}>
+                    <SizeImgButton1 src='/static/img/Shape.png' />
+                  </Col>
+                </InsideButton>
+              </Link>
+            </ButtonAdv>
+          </Row>
         </Container>
       </Landing>
     )
