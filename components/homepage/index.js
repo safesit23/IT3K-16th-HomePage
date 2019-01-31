@@ -33,19 +33,18 @@ const Title = () => (
 )
 
 const Sizeimg = styled.img`
-  @media (max-width: 375px) {
-    width: 70px;
-    height: 55.48px;
-    }
+  width : 150px;
+  height : 100px;
+  margin-top : 15%;
 `
 const DetailSize = styled.p`
     font-family: Kanit;
     color: #FFFFFF;
-  @media(max-width: 375px){
-font-style: normal;
-font-weight: normal;
-line-height: 24px;
-font-size: 14px;
+    @media(max-width: 375px){
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 14px;
   }
 `
 
@@ -104,7 +103,7 @@ class Homepage extends React.Component {
       <Landing fluid>
         <Container>
           <Row className='pt-5'>
-            <Col className='d-flex justify-content-center animated infinite pulse delay-2s'>
+            <Col className='d-flex justify-content-center animated infinite pulse'>
               <Sizeimg src='/static/img/logoIT3K.svg' />
             </Col>
           </Row>
