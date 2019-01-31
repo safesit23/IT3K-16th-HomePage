@@ -104,7 +104,7 @@ class Homepage extends React.Component {
       <Landing fluid>
         <Container>
           <Row className='pt-5'>
-            <Col className='d-flex justify-content-center'>
+            <Col className='d-flex justify-content-center animated infinite pulse delay-2s'>
               <Sizeimg src='/static/img/logoIT3K.svg' />
             </Col>
           </Row>
