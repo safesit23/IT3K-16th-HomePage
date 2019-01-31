@@ -9,8 +9,8 @@ const Img = styled.img`
   position: fixed;
 `
 
-const Footer = (props) => (
-  <Img src='/static/img/footer.png' mt={props.mtop} />
+const Footer = () => (
+  <Img src='/static/img/footer.png'  />
 )
 
 export default Footer
