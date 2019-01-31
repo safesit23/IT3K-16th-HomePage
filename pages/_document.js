@@ -29,6 +29,7 @@ export default class MyDocument extends Document {
           <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/antd/3.12.3/antd.min.css' />
           <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet' />
           <script src='https://as.alipayobjects.com/g/component/??es6-shim/0.35.1/es6-sham.min.js,es6-shim/0.35.1/es6-shim.min.js' />
+          <link rel='stylesheet' href='../static/css/animate.css' />
         </Head>
         <body>
           <NextScript />
