@@ -3,13 +3,13 @@ import App from "../components/core/App"
 import styled from "styled-components"
 
 const Landing = styled.div`
-  background: linear-gradient(220deg, #DD755B, #D8987C, #E3AFAB);
+  background: linear-gradient(220deg, #F3BBAB, #C49AAB, #C49AAB);
   background-size: 600% 600%;
   height: 100vh;
 
 -webkit-animation: AnimationName 30s ease infinite;
 -moz-animation: AnimationName 30s ease infinite;
-animation: AnimationName 1.5s ease infinite;
+animation: AnimationName 5s ease infinite;
 
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
