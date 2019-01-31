@@ -22,7 +22,7 @@ const Picture = styled.img`
 `
 
 const index = ({show}) => (
-  <Bg className={`d-flex justify-content-center align-items-center ${!show ? "hide" : ""}`}>
+  <Bg className={`d-flex justify-content-center align-items-center ${!show ? "hide" : ""} animated infinite pulse`}>
     <Picture src='/static/img/logoIT3K-Loading.png' />
   </Bg>
 )
