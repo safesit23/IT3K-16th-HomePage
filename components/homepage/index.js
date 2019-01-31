@@ -1,32 +1,15 @@
 import React from "react"
 import {Container, Row, Col} from "reactstrap"
 import styled from "styled-components"
+import Footer from "../core/Footer"
 
 const Landing = styled(Container)`
-  /* background-image : linear-gradient(270deg, #5F597B 0%, #B2605C 100%); */
-  background: linear-gradient(220deg, #DD755B, #D8987C, #E3AFAB);
-background-size: 600% 600%;
-
--webkit-animation: AnimationName 30s ease infinite;
--moz-animation: AnimationName 30s ease infinite;
-animation: AnimationName 3s ease infinite;
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-  height : 100vh;
+  height: 100vh;
+  width : 100%;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  background-image: url('/static/img/footer.png');
 `
 
 const TitleStyle = styled.h1`
@@ -48,15 +31,6 @@ font-size: 24px;
 const Title = () => (
   <TitleStyle>IT3K ครั้งที่ 16</TitleStyle>
 )
-
-const SizeDetail = styled.p`
-@media(max-width : 375px){
-  font-style: normal;
-font-weight: normal;
-line-height: 24px;
-font-size: 14px;
-}
-`
 
 const Sizeimg = styled.img`
   @media (max-width: 375px) {
@@ -120,7 +94,7 @@ const Link = styled.a`
   color: #757575;
 
   &:hover{
-    color: green;
+    color: #DD755B;
   }
 `
 
@@ -144,7 +118,7 @@ class Homepage extends React.Component {
               <DetailSize className='mb-0'>วันที่ 2 กุมภาพันธ์ พ.ศ. 2562</DetailSize>
             </Col>
             <Col xs='12' className='d-flex justify-content-center'>
-              <DetailSize2>ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้า</DetailSize2>
+              <DetailSize2>ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</DetailSize2>
             </Col>
           </Row >
           <Row className='d-flex justify-content-center'>
@@ -182,6 +156,7 @@ class Homepage extends React.Component {
             </ButtonAdv>
           </Row>
         </Container>
+        <Footer />
       </Landing>
     )
   }
