@@ -9,7 +9,7 @@ const Landing = styled.div`
 
 -webkit-animation: AnimationName 30s ease infinite;
 -moz-animation: AnimationName 30s ease infinite;
-animation: AnimationName 2.5s ease infinite;
+animation: AnimationName 1.5s ease infinite;
 
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
