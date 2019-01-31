@@ -21,7 +21,7 @@ const Picture = styled.img`
   width: auto;
 `
 
-const index = ({show , delay }) => (
+const index = ({show}) => (
   <Bg className={`d-flex justify-content-center align-items-center ${!show ? "hide" : ""}`}>
     <Picture src='/static/img/logoIT3K-Loading.png' />
   </Bg>
