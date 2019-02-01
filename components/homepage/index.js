@@ -9,6 +9,10 @@ const Landing = styled(Container)`
   left: 0;
   bottom: 0;
   position: fixed;
+  padding-top: 25%;
+  @media(min-width: 1000px){
+    padding-top: 5%;
+  }
   /* background-image: url('/static/img/footer.png'); */
 `
 
@@ -33,9 +37,8 @@ const Title = () => (
 )
 
 const Sizeimg = styled.img`
-  width : 150px;
+  width : auto;
   height : 100px;
-  margin-top : 5%;
 `
 const DetailSize = styled.p`
     font-family: Kanit;
@@ -102,7 +105,7 @@ class Homepage extends React.Component {
     return (
       <Landing fluid>
         <Container>
-          <Row className='pt-5'>
+          <Row >
             <Col className='d-flex justify-content-center animated infinite pulse'>
               <Sizeimg src='/static/img/logoIT3K.svg' />
             </Col>
