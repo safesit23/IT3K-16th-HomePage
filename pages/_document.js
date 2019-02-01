@@ -30,6 +30,8 @@ export default class MyDocument extends Document {
           <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet' />
           <script src='https://as.alipayobjects.com/g/component/??es6-shim/0.35.1/es6-sham.min.js,es6-shim/0.35.1/es6-shim.min.js' />
           <link rel='stylesheet' href='../static/css/animate.css' />
+          <meta name="theme-color" content="#C49AAB" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         </Head>
         <body>
           <NextScript />
