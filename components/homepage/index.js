@@ -1,6 +1,6 @@
 import React from "react"
 import {Container, Row, Col} from "reactstrap"
-import styled from "styled-components"
+import styled , {keyframes}  from "styled-components"
 import Footer from "../core/Footer"
 
 const Landing = styled(Container)`
@@ -14,6 +14,19 @@ const Landing = styled(Container)`
     padding-top: 5%;
   }
   /* background-image: url('/static/img/footer.png'); */
+`
+
+
+const Blink = keyframes`
+  0% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+    filter: blur(1px);
+  }
 `
 
 const TitleStyle = styled.h1`
@@ -39,6 +52,11 @@ const Title = () => (
 const Sizeimg = styled.img`
   width : auto;
   height : 100px;
+  &.overlay {
+    position: absolute; 
+    opacity: 0.6s;
+    animation: ${Blink} 2s infinite;
+  }
 `
 const DetailSize = styled.p`
     font-family: Kanit;
@@ -106,8 +124,9 @@ class Homepage extends React.Component {
       <Landing fluid>
         <Container>
           <Row >
-            <Col className='d-flex justify-content-center animated infinite pulse'>
+            <Col className='d-flex justify-content-center'>
               <Sizeimg src='/static/img/logoIT3K.svg' />
+              <Sizeimg className="overlay" src='/static/img/logoIT3K.svg' />
             </Col>
           </Row>
           <Row className='mt-3'>
