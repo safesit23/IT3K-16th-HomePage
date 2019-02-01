@@ -9,7 +9,7 @@ const Landing = styled(Container)`
   left: 0;
   bottom: 0;
   position: fixed;
-  background-image: url('/static/img/footer.png');
+  /* background-image: url('/static/img/footer.png'); */
 `
 
 const TitleStyle = styled.h1`
@@ -35,7 +35,7 @@ const Title = () => (
 const Sizeimg = styled.img`
   width : 150px;
   height : 100px;
-  margin-top : 15%;
+  margin-top : 5%;
 `
 const DetailSize = styled.p`
     font-family: Kanit;
